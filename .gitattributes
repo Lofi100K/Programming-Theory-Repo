@@ -1,2 +1,8 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Imposta LF per i file di testo
+*.cs text eol=lf
+*.meta text eol=lf
+*.txt text eol=lf
+*.unity text eol=lf
+
+# Opzionale: Forza CRLF per i file specifici di Windows
+*.bat text eol=crlf
