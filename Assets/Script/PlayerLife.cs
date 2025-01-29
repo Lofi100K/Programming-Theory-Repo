@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+    public GameObject deadPanel;
+
     public GameObject projectilePrefab; // Prefab del proiettile
     public Transform shootPoint;        // Punto di sparo (posizione iniziale del proiettile)
     public float projectileSpeed = 10f; // Velocità del proiettile
@@ -97,6 +99,7 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Time.timeScale = 0;
+            deadPanel.SetActive(true);
         }
     }
 }
